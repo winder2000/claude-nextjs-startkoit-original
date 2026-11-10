@@ -13,6 +13,7 @@ const navLinks = [
   { href: "/", label: "홈" },
   { href: "/about", label: "소개" },
   { href: "/dashboard", label: "대시보드" },
+  { href: "/login", label: "로그인" },
 ];
 
 export function Header() {

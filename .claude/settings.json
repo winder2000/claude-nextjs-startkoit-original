@@ -31,6 +31,18 @@
           }
         ]
       }
+    ],
+    "Stop": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node .claude/hooks/slack-notify.js",
+            "timeout": 10,
+            "statusMessage": "Slack 알림 전송 중..."
+          }
+        ]
+      }
     ]
   }
 }
