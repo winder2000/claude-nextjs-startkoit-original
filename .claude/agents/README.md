@@ -118,6 +118,36 @@ requirements-verifier (Mode B: 추적성 검증) ──▶ docs/handoff/03b_veri
 
 ---
 
+### 4. `notion-api-database-export` — Notion API 연동 전문가
+
+| 항목 | 내용 |
+|---|---|
+| 파일 | `notion-api-database-export.md` |
+| 모델 | Claude Sonnet |
+| 도구 | 모든 도구 (`*`) |
+
+**역할:** Notion API를 활용한 데이터베이스 조회·렌더링·내보내기 웹 애플리케이션 개발을 전담한다.
+
+**언제 사용하나:**
+- Notion 데이터베이스를 웹사이트/앱에 연동할 때
+- Notion 페이지 콘텐츠를 외부 앱에서 렌더링할 때
+- Notion 데이터 내보내기·동기화 기능 구현 시
+
+**주요 기능:**
+- `@notionhq/client` 기반 데이터베이스 조회 패턴
+- 프로퍼티 타입별(title, rich_text, select, number, date 등) 추출 헬퍼
+- ISR(증분 정적 재생성) 활용 콘텐츠 캐싱
+- cursor 기반 페이지네이션
+- Notion 블록 타입별 렌더링 컴포넌트
+- TanStack Query 연동 클라이언트 사이드 패칭
+
+**핵심 원칙:**
+- Notion API 키는 반드시 서버사이드에서만 사용 (클라이언트 노출 금지)
+- 프로젝트 기술 스택(Next.js 16, TailwindCSS v4, `@base-ui/react`) 준수
+- 주석은 한국어, 변수명/함수명은 영어(camelCase)
+
+---
+
 ## 체인 실행 프롬프트 예시
 
 ```
